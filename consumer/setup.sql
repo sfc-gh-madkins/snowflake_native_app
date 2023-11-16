@@ -20,15 +20,15 @@ CREATE OR ALTER VERSIONED SCHEMA code_schema;
 GRANT USAGE ON SCHEMA code_schema TO APPLICATION ROLE app_public;
 
 CREATE OR REPLACE FUNCTION code_schema.addone(i int)
-    RETURNS INT
-    LANGUAGE PYTHON
-    RUNTIME_VERSION = '3.8'
-    HANDLER = 'addone_py'
-  AS
-  $$
-  def addone_py(i):
-    return i+1
-  $$;
+  RETURNS INT
+  LANGUAGE PYTHON
+  RUNTIME_VERSION = '3.8'
+  HANDLER = 'addone_py'
+AS
+$$
+def addone_py(i):
+  return i+1
+$$;
   GRANT USAGE ON FUNCTION code_schema.addone(int) TO APPLICATION ROLE app_public;
 
 
