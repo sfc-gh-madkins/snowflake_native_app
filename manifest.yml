@@ -2,3 +2,4 @@ manifest_version: 1
 artifacts:
   setup_script: consumer/setup.sql
   readme: README.md
+  extension_code: true
