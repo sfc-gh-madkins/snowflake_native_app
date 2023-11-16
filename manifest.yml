@@ -1,4 +1,4 @@
 manifest_version: 1
 artifacts:
   setup_script: consumer/setup.sql
-  readme: readme.md
+  readme: README.md
