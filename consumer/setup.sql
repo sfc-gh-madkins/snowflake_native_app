@@ -39,8 +39,3 @@ CREATE or REPLACE FUNCTION code_schema.multiply(num1 float, num2 float)
   IMPORTS = ('@miles.git.snowflake_native_app/branches/master/python/hello_python.py')
   HANDLER='hello_python.multiply';
 GRANT USAGE ON FUNCTION code_schema.multiply(FLOAT, FLOAT) TO APPLICATION ROLE app_public;
-
-
-
-PUT @hello_snowflake_package.stage_content.hello_snowflake_stage/scripts overwrite=true auto_compress=false;
-PUT @hello_snowflake_package.stage_content.hello_snowflake_stage/python overwrite=true auto_compress=false;
