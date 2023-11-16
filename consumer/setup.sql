@@ -16,7 +16,7 @@ GRANT USAGE ON PROCEDURE core.hello() TO APPLICATION ROLE app_public;
 
 
 
-CREATE OR ALTER VERSIONED SCHEMA code_schema;
+CREATE SCHEMA code_schema;
 GRANT USAGE ON SCHEMA code_schema TO APPLICATION ROLE app_public;
 
 CREATE OR REPLACE FUNCTION code_schema.addone(i int)
