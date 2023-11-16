@@ -36,6 +36,6 @@ CREATE or REPLACE FUNCTION code_schema.multiply(num1 float, num2 float)
   RETURNS float
   LANGUAGE PYTHON
   RUNTIME_VERSION=3.8
-  IMPORTS = ('@miles.git.snowflake_native_app/branches/master/python/hello_python.py')
+  IMPORTS = ('/python/hello_python.py')
   HANDLER='hello_python.multiply';
 GRANT USAGE ON FUNCTION code_schema.multiply(FLOAT, FLOAT) TO APPLICATION ROLE app_public;
