@@ -1,0 +1,5 @@
+name: sf_env
+channels:
+- snowflake
+dependencies:
+- ./snowflake_ml_python-1.1.0-py3-none-any.whl
